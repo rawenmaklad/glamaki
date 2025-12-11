@@ -1,314 +1,231 @@
-/* Variables de Estilo */
+/* Variables para colores */
 :root {
---color-dark-brown: #503E3F; /* Texto principal / Fondos oscuros
-*/
---color-light-pink: #D8C6C3; /* Fondo de héroe/secundario */
---color-beige: #E8D6D4; /* Fondo de sección/Elementos claros */
---color-white: #FFFFFF;
---color-text-subtle: #A09392; /* Texto secundario */
+    --primary-color: #f7e6e5; /* Fondo claro */
+    --secondary-color: #5d3434; /* Banner oscuro y texto principal */
+    --accent-color: #a06666; /* Texto y detalles más oscuros */
+    --icon-bg: #f9f0ef; /* Fondo de los íconos */
+    --dark-text: #4a4a4a; /* Texto genérico más oscuro */
+    --light-text: #fff; /* Texto blanco (para el banner) */
 }
-/* Estilos Generales */
+
+/* Estilos globales y reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-font-family: 'Helvetica Neue', Arial, sans-serif; /* Fuente
-general */
-margin: 0;
-padding: 0;
-background-color: var(--color-white);
-color: var(--color-dark-brown);
-line-height: 1.6;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--dark-text);
+    line-height: 1.6;
+    text-align: center;
 }
-.section {
-padding: 40px 20px;
-text-align: center;
+
+/* Tipografía */
+.page-title, .icon-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-top: 20px;
 }
-h2, h3 {
-color: var(--color-dark-brown);
+
+/* --------------------------------- */
+/* ENCABEZADO (Header) */
+/* --------------------------------- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--primary-color);
 }
-/* Estilo del Logo */
-.logo-area {
-margin: 20px 0;
+
+/*  AJUSTE 1: AUMENTAR TAMAÑO DEL LOGO GLAMAKIC */
+.logo-container .logo {
+    max-width: 180px; /* Aumentado de 140px a 180px */
+    height: auto;
 }
-.logo-text {
-font-size: 3em;
-letter-spacing: 5px;
-font-weight: 300;
-margin: 0;
+
+.iniciar-sesion {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.9em;
 }
-.logo-subtitle {
-font-size: 1em;
-letter-spacing: 8px;
-margin-top: -10px;
-font-weight: bold;
-color: var(--color-text-subtle);
+
+/* --------------------------------- */
+/* CONTENIDO PRINCIPAL (Main) */
+/* --------------------------------- */
+.main-content {
+    padding: 20px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-/* --- 1. SECCIÓN PRINCIPAL / HERO --- */
-.hero {
-background-color: var(--color-light-pink);
-padding-top: 50px;
+
+.intro-text, .final-invite {
+    color: var(--dark-text);
+    margin: 20px 0;
+    font-size: 1.1em;
 }
-.header-intro {
-padding-bottom: 20px;
-max-width: 600px;
-margin: 0 auto;
+
+/* Imágenes Destacadas */
+.highlight-images {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin: 30px 0;
 }
-.header-images {
-display: flex;
-justify-content: center;
-gap: 10px;
-padding-bottom: 40px;
+
+.image-box {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 8px;
 }
-.header-images img {
-width: 40%;
-max-width: 200px;
-height: auto;
-object-fit: cover;
+
+/*  AJUSTE 2: AUMENTAR Y HOMOGENEIZAR ALTURA DE IMÁGENES DESTACADAS */
+.image-box img {
+    width: 100%;
+    height: 350px; /* Aumentado de 300px a 350px */
+    object-fit: cover;
+    display: block;
 }
-/* --- 2. DESCRIPCIÓN DE LA MARCA --- */
-.brand-details {
-background-color: var(--color-white);
+
+.logo-salome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.brand-content {
-max-width: 600px;
-margin: 0 auto;
+
+.logo-salome img {
+    max-width: 90%; 
+    height: auto;
+    object-fit: contain; 
 }
-.brand-content img {
-width: 80%;
-max-width: 350px;
-height: auto;
-margin-top: 20px;
-object-fit: cover;
+
+/* Descripción de Salomé */
+.salome-description {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
 }
-/* --- 3. ÍCONOS DE CATEGORÍAS/NAVEGACIÓN --- */
-.category-icons {
-background-color: var(--color-beige);
+
+.salome-description p {
+    flex: 2;
+    font-size: 1em;
+    padding-right: 20px;
+    max-width: 60%;
 }
-.icons-title {
-font-weight: bold;
-margin-bottom: 25px;
+
+.logo-salome-lg img {
+    max-width: 150px;
+    height: auto;
 }
-.icons-grid {
-display: flex;
-justify-content: space-around;
-flex-wrap: wrap;
-max-width: 700px;
-margin: 0 auto;
+
+.woman-red-lips {
+    flex: 1;
+    max-width: 30%; 
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* --------------------------------- */
+/* SECCIÓN DE ÍCONOS */
+/* --------------------------------- */
+.icon-selection {
+    padding: 40px 0;
+}
+
+.icon-title {
+    color: var(--accent-color);
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.icon-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 .icon-item {
-width: 18%;
-text-align: center;
-margin-bottom: 15px;
+    text-align: center;
+    width: 18%; 
+    min-width: 120px;
 }
+
+/* AJUSTE 3: AUMENTAR TAMAÑO DE LOS ÍCONOS */
 .icon-item img {
-border-radius: 50%;
-border: 3px solid var(--color-text-subtle);
-padding: 10px;
+    width: 250px; /* Aumentado de 100px a 120px */
+    height: 250px; /* Aumentado de 100px a 120px */
+    border-radius: 50%;
+    background-color: var(--icon-bg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
 }
+
+.icon-item img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
 .icon-item p {
-font-size: 0.7em;
-font-weight: bold;
-margin-top: 5px;
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
 }
-/* --- 4. DETALLE DE LÍNEA DE MAQUILLAJE --- */
-.makeup-line {
-background-color: var(--color-white);
-text-align: left;
+
+/* --------------------------------- */
+/* BANNER INFERIOR (Footer) */
+/* --------------------------------- */
+.contact-banner {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: 'Playfair Display', serif;
 }
-.makeup-line .intro-text {
-text-align: center;
-margin-bottom: 40px;
-}
-.product-group {
-display: flex;
-align-items: center;
-margin-bottom: 40px;
-}
-.product-group img {
-width: 40%;
-max-width: 200px;
-height: auto;
-object-fit: cover;
-}
-.group-info {
-width: 60%;
-padding: 0 15px;
-}
-/* Inversión de orden para Rubores y Sombras */
-.rubores-sombras {
-flex-direction: row-reverse;
-}
-.rubores-sombras .group-info {
-text-align: right;
-}
-/* --- 5. SKINCARE Y 6. CABELLO --- */
-.skincare, .hair-care, .nail-polish {
-background-color: var(--color-light-pink);
-text-align: center;
-}
-.skincare-content {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 20px;
-}
-.skincare-content img {
-width: 100%;
-max-width: 400px;
-height: auto;
-}
-.hair-content {
-display: flex;
-justify-content: space-around;
-margin-bottom: 20px;
-}
-.hair-item img {
-width: 100px;
-height: 150px;
-object-fit: cover;
-}
-/* --- 7. ESMALTES --- */
-.nail-content {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 20px;
-max-width: 600px;
-margin: 0 auto;
-}
-.nail-content img {
-width: 100px;
-height: 150px;
-object-fit: cover;
-}
-/* --- 8. TUTORIALES Y CONSEJOS --- */
-.tutorials-tips {
-background-color: var(--color-white);
-}
-.youtube-block {
-margin: 30px auto;
-max-width: 500px;
-}
-.youtube-block img {
-width: 100%;
-height: auto;
-}
-.youtube-link {
-font-size: 0.8em;
-color: var(--color-text-subtle);
-margin-top: 5px;
-}
-.tips-list {
-list-style: decimal;
-text-align: left;
-max-width: 700px;
-margin: 30px auto;
-padding-left: 20px;
-}
-.tips-list li {
-margin-bottom: 15px;
-}
-.next-arrow {
-font-size: 2em;
-font-weight: bold;
-color: var(--color-dark-brown);
-text-decoration: none;
-border: 2px solid var(--color-dark-brown);
-border-radius: 50%;
-padding: 0px 12px;
-display: inline-block;
-}
-/* --- 9. LISTA DE PRODUCTOS CON PRECIOS --- */
-.product-price-list {
-background-color: var(--color-beige);
-}
-.product-item {
-display: flex;
-align-items: center;
-margin-bottom: 30px;
-padding-bottom: 20px;
-border-bottom: 1px solid var(--color-text-subtle);
-max-width: 700px;
-margin: 0 auto 30px auto;
-}
-.product-item img {
-width: 80px;
-height: 80px;
-object-fit: contain;
-margin-right: 15px;
-}
-.product-details {
-flex-grow: 1;
-text-align: left;
-}
-.product-details h3 {
-margin: 0 0 5px 0;
-font-size: 1.1em;
-}
-.product-details p {
-font-size: 0.85em;
-color: var(--color-text-subtle);
-margin: 0;
-}
-.product-price {
-font-weight: bold;
-color: var(--color-dark-brown);
-font-size: 1.2em;
-white-space: nowrap; /* Evita que el precio se rompa */
-}
-/* --- 10. MODALES (Registro/Login) --- */
-.modal {
-background-color: var(--color-dark-brown);
-color: var(--color-beige);
-text-align: center;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-position: fixed; /* Ocupa toda la pantalla */
-top: 0;
-left: 0;
-width: 100%;
-z-index: 100;
-}
-.hidden {
-display: none !important;
-}
-.modal-content {
-background-color: var(--color-secondary); /* Color rosa pálido del
-modal */
-padding: 50px 30px;
-width: 90%;
-max-width: 400px;
-position: relative;
-}
-.back-btn {
-position: absolute;
-top: 20px;
-left: 20px;
-color: var(--color-dark-brown);
-text-decoration: none;
-font-size: 24px;
-}
-.welcome {
-color: var(--color-dark-brown);
-margin-top: 0;
-font-size: 1.5em;
-}
-.modal-content form input {
-width: 100%;
-padding: 15px;
-margin-bottom: 20px;
-border: none;
-background-color: var(--color-beige);
-box-sizing: border-box;
-}
-.btn-start, .btn-register {
-background-color: var(--color-dark-brown);
-color: var(--color-beige);
-padding: 15px 30px;
-border: none;
-cursor: pointer;
-font-size: 16px;
-text-transform: uppercase;
-width: 100%;
-margin-top: 10px;
+
+/* Media Queries para responsividad básica */
+@media (max-width: 768px) {
+    .highlight-images {
+        flex-direction: column;
+    }
+    
+    .image-box img {
+        height: 300px; /* Ajuste para móvil */
+    }
+
+    .icon-item img {
+        width: 100px; 
+        height: 100px;
+    }
+    
+    .salome-description {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .salome-description p {
+        max-width: 100%;
+        padding-right: 0;
+    }
 }
