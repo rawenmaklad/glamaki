@@ -223,6 +223,16 @@ body {
         flex-direction: column;
         text-align: center;
     }
+    /* Página normal */
+body {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Página cuando se activa la transición */
+.page-transition {
+    opacity: 0;
+}
     
     .salome-description p {
         max-width: 100%;
